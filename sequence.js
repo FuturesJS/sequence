@@ -38,7 +38,7 @@
       ;
 
     if ('function' !== typeof callback) {
-      throw new Error("`Sequence().then(callback [context])` requires that `callback` be a function and that `context` be `null`, an object, or a function");
+      throw new Error("`Sequence().then(callback, [context])` requires that `callback` be a function and that `context` be `null`, an object, or a function");
     }
     me._stack.push({
       callback: callback,
