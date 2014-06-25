@@ -1,3 +1,28 @@
+huzzah for es6-promise!
+===
+
+Now that `es6-promise` exists, `Sequence` isn't really necessary. Try `es6-promise` today!
+
+```javascript
+var Promise = require('es6-promise').Promise
+  , state = {}
+  ;
+  
+new Promise(function (resolve, reject) {
+  resolve('a');
+}).then(function (a) {
+  state.a = a;
+  return new Promise(function (resolve, reject) {
+    resolve('b');
+  });
+}).then(function (b) {
+  state.b = b;
+  console.log(state);
+})
+```
+
+P.S. Sequence is admittedly a bit more intuitive than and I'd happily accept a pull request that uses es6-promise under the hood.
+
 Sequence
 ===
 
